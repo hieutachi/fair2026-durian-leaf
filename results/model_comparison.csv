@@ -1,0 +1,14 @@
+﻿family,model,feature_set,n_features,val_macro_f1,test_macro_f1,test_balanced_accuracy,test_accuracy,note
+DL_teacher,mobilenet_v2,raw_image,-,0.9458,0.9255,0.9261,0.9289,best_seed=42; mean±std trên 3 seed = 0.9088±0.0119
+Hybrid_embedding,logistic_regression,embedding,1280,0.9445,0.9235,0.9241,0.9264,fit 0.99s
+Hybrid_concat,logistic_regression,concat,1351,0.945,0.9207,0.921,0.9239,fit 0.97s
+Hybrid_concat,random_forest,concat,1351,0.9378,0.9138,0.9125,0.9162,fit 0.61s
+Hybrid_embedding,random_forest,embedding,1280,0.9378,0.9114,0.9099,0.9137,fit 0.59s
+Hybrid_concat,lightgbm,concat,1351,0.9267,0.8951,0.8937,0.8985,fit 0.46s
+Hybrid_embedding,lightgbm,embedding,1280,0.9295,0.895,0.8935,0.8985,fit 0.52s
+Hybrid_embedding,xgboost,embedding,1280,0.9374,0.8931,0.8912,0.8959,fit 4.54s
+Hybrid_concat,xgboost,concat,1351,0.9272,0.8931,0.8912,0.8959,fit 5.45s
+Classical_only,xgboost,handcrafted,71,0.8258,0.8151,0.8156,0.8198,fit 2.23s
+Classical_only,lightgbm,handcrafted,71,0.827,0.8121,0.8128,0.8173,fit 1.2s
+Classical_only,random_forest,handcrafted,71,0.8166,0.7773,0.7787,0.7843,fit 0.6s
+Classical_only,logistic_regression,handcrafted,71,0.795,0.7599,0.7588,0.7614,fit 1.02s

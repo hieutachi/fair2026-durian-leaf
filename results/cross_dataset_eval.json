@@ -1,0 +1,295 @@
+{
+  "source_dataset": "mendeley_pxzvksbwnj",
+  "target_dataset": "kaggle_durian_leaf_disease_dataset",
+  "teacher_seed": 42,
+  "retrained": false,
+  "shared_classes": [
+    "Leaf_Algal",
+    "Leaf_Blight",
+    "Leaf_Healthy",
+    "Leaf_Phomopsis"
+  ],
+  "class_map_kaggle_to_mendeley": {
+    "ALGAL_LEAF_SPOT": "Leaf_Algal",
+    "LEAF_BLIGHT": "Leaf_Blight",
+    "HEALTHY_LEAF": "Leaf_Healthy",
+    "PHOMOPSIS_LEAF_SPOT": "Leaf_Phomopsis"
+  },
+  "excluded_target_classes": [
+    "ALLOCARIDARA_ATTACK"
+  ],
+  "source_only_classes": [
+    "Leaf_Colletotrichum",
+    "Leaf_Rhizoctonia"
+  ],
+  "n_target_test_all": 890,
+  "n_target_test_shared": 707,
+  "n_source_test_shared": 273,
+  "teacher_in_domain": {
+    "accuracy": 0.989010989010989,
+    "macro_f1": 0.9888729732631805,
+    "weighted_f1": 0.9890114798762923,
+    "balanced_accuracy": 0.9888888888888889,
+    "per_class": {
+      "Leaf_Algal": {
+        "precision": 0.9855072463768116,
+        "recall": 0.9714285714285714,
+        "f1": 0.9784172661870504,
+        "support": 70
+      },
+      "Leaf_Blight": {
+        "precision": 0.9705882352941176,
+        "recall": 1.0,
+        "f1": 0.9850746268656716,
+        "support": 66
+      },
+      "Leaf_Healthy": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 74
+      },
+      "Leaf_Phomopsis": {
+        "precision": 1.0,
+        "recall": 0.9841269841269841,
+        "f1": 0.992,
+        "support": 63
+      }
+    },
+    "confusion_matrix": [
+      [
+        68,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        66,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        74,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        62
+      ]
+    ],
+    "labels": [
+      "Leaf_Algal",
+      "Leaf_Blight",
+      "Leaf_Healthy",
+      "Leaf_Phomopsis"
+    ]
+  },
+  "teacher_out_of_domain": {
+    "accuracy": 0.4328147100424328,
+    "macro_f1": 0.3782098775358911,
+    "weighted_f1": 0.3814958590572123,
+    "balanced_accuracy": 0.4198858702088185,
+    "per_class": {
+      "Leaf_Algal": {
+        "precision": 0.8181818181818182,
+        "recall": 0.12244897959183673,
+        "f1": 0.21301775147928995,
+        "support": 147
+      },
+      "Leaf_Blight": {
+        "precision": 0.3228621291448517,
+        "recall": 0.9840425531914894,
+        "f1": 0.48620236530880423,
+        "support": 188
+      },
+      "Leaf_Healthy": {
+        "precision": 0.84,
+        "recall": 0.10714285714285714,
+        "f1": 0.19004524886877827,
+        "support": 196
+      },
+      "Leaf_Phomopsis": {
+        "precision": 0.9425287356321839,
+        "recall": 0.4659090909090909,
+        "f1": 0.623574144486692,
+        "support": 176
+      }
+    },
+    "confusion_matrix": [
+      [
+        18,
+        126,
+        1,
+        2
+      ],
+      [
+        0,
+        185,
+        1,
+        2
+      ],
+      [
+        0,
+        174,
+        21,
+        1
+      ],
+      [
+        4,
+        88,
+        2,
+        82
+      ]
+    ],
+    "labels": [
+      "Leaf_Algal",
+      "Leaf_Blight",
+      "Leaf_Healthy",
+      "Leaf_Phomopsis"
+    ]
+  },
+  "teacher_out_of_domain_unrestricted": {
+    "accuracy": 0.4158415841584158,
+    "n_predicted_into_source_only_classes": 91,
+    "leak_by_class": {
+      "Leaf_Colletotrichum": 1,
+      "Leaf_Rhizoctonia": 90
+    }
+  },
+  "frozen_head_in_domain": {
+    "accuracy": 0.9853479853479854,
+    "macro_f1": 0.985016502926691,
+    "weighted_f1": 0.9853714759493363,
+    "balanced_accuracy": 0.984920634920635,
+    "per_class": {
+      "Leaf_Algal": {
+        "precision": 0.9855072463768116,
+        "recall": 0.9714285714285714,
+        "f1": 0.9784172661870504,
+        "support": 70
+      },
+      "Leaf_Blight": {
+        "precision": 0.9565217391304348,
+        "recall": 1.0,
+        "f1": 0.9777777777777777,
+        "support": 66
+      },
+      "Leaf_Healthy": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 74
+      },
+      "Leaf_Phomopsis": {
+        "precision": 1.0,
+        "recall": 0.9682539682539683,
+        "f1": 0.9838709677419355,
+        "support": 63
+      }
+    },
+    "confusion_matrix": [
+      [
+        68,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        66,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        74,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        61
+      ]
+    ],
+    "labels": [
+      "Leaf_Algal",
+      "Leaf_Blight",
+      "Leaf_Healthy",
+      "Leaf_Phomopsis"
+    ]
+  },
+  "frozen_head_out_of_domain": {
+    "accuracy": 0.43564356435643564,
+    "macro_f1": 0.3810941710941711,
+    "weighted_f1": 0.37379364474131094,
+    "balanced_accuracy": 0.4297651120409479,
+    "per_class": {
+      "Leaf_Algal": {
+        "precision": 0.8947368421052632,
+        "recall": 0.23129251700680273,
+        "f1": 0.3675675675675676,
+        "support": 147
+      },
+      "Leaf_Blight": {
+        "precision": 0.323943661971831,
+        "recall": 0.9787234042553191,
+        "f1": 0.48677248677248675,
+        "support": 188
+      },
+      "Leaf_Healthy": {
+        "precision": 1.0,
+        "recall": 0.02040816326530612,
+        "f1": 0.04,
+        "support": 196
+      },
+      "Leaf_Phomopsis": {
+        "precision": 0.8865979381443299,
+        "recall": 0.48863636363636365,
+        "f1": 0.63003663003663,
+        "support": 176
+      }
+    },
+    "confusion_matrix": [
+      [
+        34,
+        107,
+        0,
+        6
+      ],
+      [
+        0,
+        184,
+        0,
+        4
+      ],
+      [
+        0,
+        191,
+        4,
+        1
+      ],
+      [
+        4,
+        86,
+        0,
+        86
+      ]
+    ],
+    "labels": [
+      "Leaf_Algal",
+      "Leaf_Blight",
+      "Leaf_Healthy",
+      "Leaf_Phomopsis"
+    ]
+  },
+  "delta_macro_f1_teacher": -0.6106630957272894,
+  "delta_macro_f1_head": -0.6039223318325199,
+  "note": "Evaluation restricted to the classes shared by both datasets; the pest class present only in the target dataset is excluded. The backbone is not retrained, so this measures zero-shot transfer across orchards and acquisition conditions."
+}

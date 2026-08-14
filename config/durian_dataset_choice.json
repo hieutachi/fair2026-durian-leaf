@@ -1,0 +1,143 @@
+{
+  "leaf_main": "mendeley_pxzvksbwnj",
+  "uav_optional": "zenodo_15234669",
+  "reason": "mendeley_pxzvksbwnj: type=leaf, n_images=2595, n_classes=6, annotator=L3, vietnam_origin=True, official_split=True, ready_to_use=True, source=mendeley -> score=118.59",
+  "ranking": [
+    {
+      "dataset_id": "mendeley_pxzvksbwnj",
+      "score": 118.59,
+      "type": "leaf"
+    },
+    {
+      "dataset_id": "mendeley_mhjwyb5p48",
+      "score": 84.0,
+      "type": "mixed"
+    },
+    {
+      "dataset_id": "zenodo_15234669",
+      "score": 38.33,
+      "type": "uav"
+    },
+    {
+      "dataset_id": "kaggle_durian_leaf_disease_dataset",
+      "score": 85.94,
+      "type": "leaf"
+    }
+  ],
+  "candidates": {
+    "mendeley_pxzvksbwnj": {
+      "csv_row": 2,
+      "crop": "durian",
+      "dataset_id": "mendeley_pxzvksbwnj",
+      "name": "Bộ dữ liệu hình ảnh lá sầu riêng về các bệnh thường gặp ở Việt Nam phục vụ chẩn đoán nông nghiệp.",
+      "url": "https://data.mendeley.com/datasets/pxzvksbwnj/4",
+      "paper_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12272783/",
+      "provider": "iphone 14, Địa điểm 1: Huyện Bư Đứng, tỉnh Bình Phước, Việt Nam. Địa điểm 2: Huyện Cái Lề, tỉnh Tiền Giang, Việt Nam. 1/2025",
+      "image_type": "Ảnh thô",
+      "type": "leaf",
+      "n_images": 2595,
+      "n_classes": 6,
+      "labels_declared": [
+        "Khỏe mạnh",
+        "Lá nhiễm tảo",
+        "Lá_Nhiễm_Colletotrichum",
+        "Lá_Nhiễm_Phomopsis",
+        "Lá_Nhiễm_Rhizoctonia",
+        "Lá_Cháy_mùn"
+      ],
+      "expert_level": "L3",
+      "annotator_note": "L3 (2 annotator CVAT, κ=0.85; 30% re-check bởi 2 kỹ sư NN; hướng dẫn bởi chuyên gia bệnh học)",
+      "ready_to_use": true,
+      "official_split": {
+        "train": 1814,
+        "val": 387,
+        "test": 394
+      },
+      "vietnam_origin": true,
+      "source": "mendeley",
+      "mendeley_id": "pxzvksbwnj",
+      "mendeley_version": 4
+    },
+    "mendeley_mhjwyb5p48": {
+      "csv_row": 3,
+      "crop": "durian",
+      "dataset_id": "mendeley_mhjwyb5p48",
+      "name": "Bộ dữ liệu hình ảnh về mười loại bệnh sầu riêng được ghi lại trong điều kiện thực tế tại một vườn sầu riêng gia đình ở Vĩnh Long, Việt Nam.",
+      "url": "https://data.mendeley.com/datasets/mhjwyb5p48/1",
+      "paper_url": "",
+      "provider": "Vườn Vĩnh Long, iPhone 14, ánh sáng tự nhiên, 7/2025",
+      "image_type": "Ảnh thô",
+      "type": "mixed",
+      "n_images": 4000,
+      "n_classes": 10,
+      "labels_declared": [
+        "Thrips",
+        "Stem blight",
+        "Canker",
+        "Pink disease",
+        "Gummosis",
+        "Mealybug",
+        "Anthracnose",
+        "Fruit rot",
+        "Sooty mold",
+        "Yellow leaf"
+      ],
+      "expert_level": "L3",
+      "annotator_note": "L2/L3 (triệu chứng xác nhận bởi chuyên gia bệnh học)",
+      "ready_to_use": true,
+      "official_split": null,
+      "vietnam_origin": true,
+      "source": "mendeley",
+      "mendeley_id": "mhjwyb5p48",
+      "mendeley_version": 1
+    },
+    "zenodo_15234669": {
+      "csv_row": 4,
+      "crop": "durian",
+      "dataset_id": "zenodo_15234669",
+      "name": "InterDuPa-UAV: Bộ dữ liệu dựa trên UAV để phân loại cây sầu riêng và đu đủ trồng xen canh",
+      "url": "https://zenodo.org/records/15234669",
+      "paper_url": "https://zenodo.org/records/15234669",
+      "provider": "ĐH Cần Thơ",
+      "image_type": "Ảnh thô",
+      "type": "uav",
+      "n_images": 3327,
+      "n_classes": null,
+      "labels_declared": [],
+      "expert_level": "L1",
+      "annotator_note": "",
+      "ready_to_use": true,
+      "official_split": null,
+      "vietnam_origin": true,
+      "source": "zenodo",
+      "zenodo_id": "15234669"
+    },
+    "kaggle_durian_leaf_disease_dataset": {
+      "csv_row": 5,
+      "crop": "durian",
+      "dataset_id": "kaggle_durian_leaf_disease_dataset",
+      "name": "Durian Leaf Disease Dataset",
+      "url": "https://www.kaggle.com/datasets/cthng123/durian-leaf-disease-dataset/data",
+      "paper_url": "",
+      "provider": "thu thập từ các trang trại sầu riêng ở khu vực Đông Nam Bộ của Việt Nam",
+      "image_type": "Ảnh thô",
+      "type": "leaf",
+      "n_images": 4437,
+      "n_classes": 5,
+      "labels_declared": [
+        "Đốm tảo trên lá",
+        "Allocaridara",
+        "Lá cây khỏe mạnh",
+        "Bệnh cháy lá",
+        "Bệnh đốm lá Phomopsis"
+      ],
+      "expert_level": "L2",
+      "annotator_note": "hai chuyên gia được đánh giá bằng chỉ số Kappa của Cohen, đạt 98,25%",
+      "ready_to_use": true,
+      "official_split": null,
+      "vietnam_origin": true,
+      "source": "kaggle",
+      "kaggle_slug": "cthng123/durian-leaf-disease-dataset"
+    }
+  }
+}

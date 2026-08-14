@@ -1,0 +1,4 @@
+﻿model,trainable_part,n_params_or_features,test_macro_f1,test_balanced_accuracy,train_time_sec,head_only_latency_ms,end_to_end_latency_ms_cpu_b1,model_size_mb,note,accuracy_retained_pct,train_speedup_vs_teacher
+"mobilenet_v2 (teacher, end-to-end)",toàn bộ backbone + head,2.232M params,0.9255,0.9261,57.7,-,8.291,8.748,"seed 42, 15 epoch (early stop ở epoch 10)",100.0,1.0
+logistic_regression on frozen embedding,chỉ head (backbone đóng băng),1280 features,0.9235,0.9241,1.28,0.103,8.394,0.089,backbone dùng lại từ teacher seed 42,99.78,45.1
+linear_svm on frozen embedding,chỉ head (backbone đóng băng),1280 features,0.9179,0.9178,0.44,0.128,8.419,0.089,backbone dùng lại từ teacher seed 42,99.18,131.1

@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+message: If you use this reproduction package, please cite the paper.
+title: >-
+  Cost-Aware Durian Leaf Disease Classification for Vietnamese Orchards:
+  A Frozen-Backbone Pipeline with Statistical Validation
+type: software
+authors:
+  - family-names: Ta
+    given-names: Chi Hieu
+    affiliation: Thuy Loi University
+    email: hieutc@tlu.edu.vn
+  - family-names: Vu
+    given-names: Thi Thanh Nhai
+    affiliation: Thuy Loi University
+    email: nhaivu.2004@gmail.com
+abstract: >-
+  Reproduction package for a FAIR 2026 evaluation of a frozen-backbone
+  durian leaf disease pipeline on a Vietnamese public dataset.
+  Not a new architecture and not a state-of-the-art claim.
+keywords:
+  - durian leaf disease
+  - smart agriculture
+  - frozen backbone
+  - update cost
+  - domain shift
+date-released: "2026-08-14"
+year: 2026
+preferred-citation:
+  type: conference-paper
+  title: >-
+    Cost-Aware Durian Leaf Disease Classification for Vietnamese Orchards:
+    A Frozen-Backbone Pipeline with Statistical Validation
+  authors:
+    - family-names: Ta
+      given-names: Chi Hieu
+      affiliation: Thuy Loi University
+      email: hieutc@tlu.edu.vn
+    - family-names: Vu
+      given-names: Thi Thanh Nhai
+      affiliation: Thuy Loi University
+      email: nhaivu.2004@gmail.com
+  year: 2026
+  conference:
+    name: >-
+      National Conference on Fundamental and Applied Information
+      Technology Research (FAIR)
+  institution:
+    name: Thuy Loi University
+    city: Hanoi
+    country: VN
+  notes: FAIR 2026. Corresponding author: Ta Chi Hieu (hieutc@tlu.edu.vn).

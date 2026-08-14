@@ -1,0 +1,125 @@
+{
+  "dataset_id": "mendeley_pxzvksbwnj",
+  "alpha": 0.05,
+  "n_test": 394,
+  "model_A_teacher": {
+    "name": "mobilenet_v2_seed42",
+    "macro_f1": 0.925548602756929,
+    "accuracy": 0.9289340101522843,
+    "balanced_accuracy": 0.9261037383988203
+  },
+  "model_B_hybrid": {
+    "name": "concat__logistic_regression",
+    "macro_f1": 0.9206909330668317,
+    "accuracy": 0.9238578680203046,
+    "balanced_accuracy": 0.9210120328972787
+  },
+  "mcnemar_overall": {
+    "only_A_correct": 5,
+    "only_B_correct": 3,
+    "n_discordant": 8,
+    "p_value": 0.7265625,
+    "significant_at_0.05": false
+  },
+  "mcnemar_per_class_one_vs_rest": {
+    "Leaf_Algal": {
+      "only_A_correct": 0,
+      "only_B_correct": 0,
+      "n_discordant": 0,
+      "p_value": 1.0,
+      "significant_at_0.05": false,
+      "teacher_f1": 0.9714285714285714,
+      "hybrid_f1": 0.9714285714285714
+    },
+    "Leaf_Blight": {
+      "only_A_correct": 6,
+      "only_B_correct": 2,
+      "n_discordant": 8,
+      "p_value": 0.2890625,
+      "significant_at_0.05": false,
+      "teacher_f1": 0.8333333333333334,
+      "hybrid_f1": 0.803030303030303
+    },
+    "Leaf_Colletotrichum": {
+      "only_A_correct": 1,
+      "only_B_correct": 2,
+      "n_discordant": 3,
+      "p_value": 1.0,
+      "significant_at_0.05": false,
+      "teacher_f1": 0.8421052631578947,
+      "hybrid_f1": 0.8521739130434782
+    },
+    "Leaf_Healthy": {
+      "only_A_correct": 0,
+      "only_B_correct": 1,
+      "n_discordant": 1,
+      "p_value": 1.0,
+      "significant_at_0.05": false,
+      "teacher_f1": 0.9932885906040269,
+      "hybrid_f1": 1.0
+    },
+    "Leaf_Phomopsis": {
+      "only_A_correct": 0,
+      "only_B_correct": 2,
+      "n_discordant": 2,
+      "p_value": 0.5,
+      "significant_at_0.05": false,
+      "teacher_f1": 0.9682539682539683,
+      "hybrid_f1": 0.9841269841269841
+    },
+    "Leaf_Rhizoctonia": {
+      "only_A_correct": 5,
+      "only_B_correct": 1,
+      "n_discordant": 6,
+      "p_value": 0.21875,
+      "significant_at_0.05": false,
+      "teacher_f1": 0.9448818897637795,
+      "hybrid_f1": 0.9133858267716536
+    }
+  },
+  "bootstrap_macro_f1_diff": {
+    "n_boot": 2000,
+    "mean_diff": 0.004971419419921902,
+    "ci95_low": -0.009385040645092374,
+    "ci95_high": 0.019838845514781666,
+    "ci_contains_zero": true,
+    "p_two_sided_empirical": 0.496
+  },
+  "paired_per_seed": {
+    "pairs": [
+      {
+        "seed": 42,
+        "teacher_macro_f1": 0.925548602756929,
+        "hybrid_macro_f1": 0.9257316794615829,
+        "diff": -0.00018307670465389503
+      },
+      {
+        "seed": 43,
+        "teacher_macro_f1": 0.8998849743298112,
+        "hybrid_macro_f1": 0.9169081308971467,
+        "diff": -0.01702315656733555
+      },
+      {
+        "seed": 44,
+        "teacher_macro_f1": 0.9009325185443346,
+        "hybrid_macro_f1": 0.914790583042202,
+        "diff": -0.013858064497867306
+      }
+    ],
+    "n_pairs": 3,
+    "teacher_mean": 0.9087886985436916,
+    "hybrid_mean": 0.9191434644669773,
+    "mean_diff": -0.010354765923285584,
+    "paired_t_test": {
+      "statistic": -2.00391598439214,
+      "p_value": 0.1829715629173571,
+      "significant_at_0.05": false
+    },
+    "wilcoxon": {
+      "statistic": 0.0,
+      "p_value": 0.25,
+      "significant_at_0.05": false
+    },
+    "caveat": "Chỉ có 3 cặp (bằng số seed) nên power của paired test rất thấp; bằng chứng chính nên dựa vào McNemar và bootstrap trên 394 ảnh test."
+  }
+}

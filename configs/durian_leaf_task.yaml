@@ -1,0 +1,67 @@
+# Đặc tả task nhánh SẦU RIÊNG - sinh tự động bởi scripts/prepare_splits.py
+# Mọi script chỉ cần: --config configs/durian_leaf_task.yaml
+task_name: durian_leaf_disease_classification
+dataset_id: mendeley_pxzvksbwnj
+dataset_root: data/durian/mendeley_pxzvksbwnj/
+split_file: data/splits/durian_mendeley_pxzvksbwnj_split.csv
+models_dir: models
+features_dir: features
+results_dir: results
+reports_dir: reports
+logs_dir: results/logs
+source_url: https://data.mendeley.com/datasets/pxzvksbwnj/4
+paper_url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12272783/
+
+labels:
+  - Leaf_Algal                # Đốm tảo (algal leaf spot)
+  - Leaf_Blight               # Cháy bìa lá (blight)
+  - Leaf_Colletotrichum       # Thán thư Colletotrichum
+  - Leaf_Healthy              # Lá khỏe mạnh
+  - Leaf_Phomopsis            # Đốm lá Phomopsis
+  - Leaf_Rhizoctonia          # Cháy lá Rhizoctonia
+
+metrics:
+  primary: macro_f1
+  secondary:
+    - balanced_accuracy
+    - confusion_matrix
+    - per_class_precision_recall
+
+model:
+  backbone: mobilenet_v2
+  input_size: 224
+  pretrained: imagenet
+  optimizer: adamw
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+
+training:
+  epochs: 25
+  batch_size: 32
+  num_workers: 4
+  seeds: [42, 43, 44]
+  early_stopping_patience: 5
+  device: auto            # auto | cuda | cpu | mps
+  amp: true               # mixed precision khi có CUDA
+
+augmentation:
+  horizontal_flip: true
+  vertical_flip: false
+  color_jitter: "brightness=0.1,contrast=0.1,saturation=0.1"
+  random_resized_crop_scale: [0.8, 1.0]
+
+hybrid:
+  handcrafted: true       # color stats + HSV histogram + GLCM + LBP + shape
+  classifiers: [lightgbm, xgboost, random_forest, logistic_regression]
+  feature_sets: [handcrafted, embedding, concat]
+
+explain:
+  shap_max_samples: 300
+  # 1 ảnh/lớp: lưới 6 ô đủ cho một hình một cột mà mỗi ảnh vẫn đủ lớn để đọc được nhãn.
+  gradcam_per_class: 1
+
+compute_mode:
+  profile_only: false
+  train_small: false
+  small_epochs: 2
+  small_per_class: 40

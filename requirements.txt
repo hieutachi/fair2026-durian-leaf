@@ -1,0 +1,16 @@
+# Nhánh sầu riêng - phiên bản đã kiểm chứng trên máy hiện tại (Python 3.13, Windows, CUDA 12.4)
+torch==2.6.0
+torchvision==0.21.0
+numpy==2.1.1
+pandas==2.2.3
+scikit-learn==1.6.1
+scikit-image==0.26.0
+opencv-python==4.11.0.86
+lightgbm==4.6.0
+xgboost==3.2.0
+shap==0.52.0
+matplotlib==3.10.1
+Pillow==12.1.1
+PyYAML==6.0.2
+tqdm==4.67.1
+psutil==7.0.0

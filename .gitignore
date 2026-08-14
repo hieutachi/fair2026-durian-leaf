@@ -1,0 +1,63 @@
+# Raw / large data — download locally, do not commit
+data/raw/
+data/**/raw/
+data/**/raw_files/
+data/**/images/
+data/**/*.zip
+data/**/*.rar
+data/**/*.7z
+data/**/*.tar
+data/**/*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Checkpoints and serialised models
+*.pt
+*.pth
+*.ckpt
+*.pkl
+models/
+checkpoints/
+
+# Embedding / feature caches
+*.npz
+features/
+embeddings/
+.cache/
+cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Notebooks / logs (keep published result tables)
+.ipynb_checkpoints/
+wandb/
+lightning_logs/
+*.log
+
+# Keep small published tables and notes under results/
+!results/
+!results/**/
+!results/**/*.csv
+!results/**/*.json
+!results/**/*.md
+
+# NumPy embedding / array caches
+*.npy

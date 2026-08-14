@@ -1,0 +1,51 @@
+{
+  "dataset_id": "mendeley_pxzvksbwnj",
+  "device": "NVIDIA GeForce RTX 3090 (CUDA) / AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+  "backbone_cpu_latency_ms_b1": 8.291,
+  "n_test": 394,
+  "rows": [
+    {
+      "model": "mobilenet_v2 (teacher, end-to-end)",
+      "trainable_part": "toàn bộ backbone + head",
+      "n_params_or_features": "2.232M params",
+      "test_macro_f1": 0.9255,
+      "test_balanced_accuracy": 0.9261,
+      "train_time_sec": 57.7,
+      "head_only_latency_ms": "-",
+      "end_to_end_latency_ms_cpu_b1": 8.291,
+      "model_size_mb": 8.748,
+      "note": "seed 42, 15 epoch (early stop ở epoch 10)",
+      "accuracy_retained_pct": 100.0,
+      "train_speedup_vs_teacher": 1.0
+    },
+    {
+      "model": "logistic_regression on frozen embedding",
+      "trainable_part": "chỉ head (backbone đóng băng)",
+      "n_params_or_features": "1280 features",
+      "test_macro_f1": 0.9235,
+      "test_balanced_accuracy": 0.9241,
+      "train_time_sec": 1.28,
+      "head_only_latency_ms": 0.103,
+      "end_to_end_latency_ms_cpu_b1": 8.394,
+      "model_size_mb": 0.089,
+      "note": "backbone dùng lại từ teacher seed 42",
+      "accuracy_retained_pct": 99.78,
+      "train_speedup_vs_teacher": 45.1
+    },
+    {
+      "model": "linear_svm on frozen embedding",
+      "trainable_part": "chỉ head (backbone đóng băng)",
+      "n_params_or_features": "1280 features",
+      "test_macro_f1": 0.9179,
+      "test_balanced_accuracy": 0.9178,
+      "train_time_sec": 0.44,
+      "head_only_latency_ms": 0.128,
+      "end_to_end_latency_ms_cpu_b1": 8.419,
+      "model_size_mb": 0.089,
+      "note": "backbone dùng lại từ teacher seed 42",
+      "accuracy_retained_pct": 99.18,
+      "train_speedup_vs_teacher": 131.1
+    }
+  ],
+  "caveat": "Head chạy trên embedding nên inference thực tế vẫn phải qua backbone: cột end_to_end = backbone + head. Lợi thế của head nằm ở TRAIN TIME và khả năng retrain khi thêm lớp bệnh mới, không phải ở latency."
+}
