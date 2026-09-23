@@ -46,6 +46,11 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Qoder IDE local artifacts (site descriptor holds deployment recovery state)
+.qoder/
+*.qoder.site
+.qoder/canvases/*.canvas.data.json
+
 # Notebooks / logs (keep published result tables)
 .ipynb_checkpoints/
 wandb/

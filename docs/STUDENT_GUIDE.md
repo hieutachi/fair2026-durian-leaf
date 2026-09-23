@@ -6,6 +6,11 @@ Bài này đánh giá pipeline trên một bộ dữ liệu công khai của Vi�
 
 ## 1. Đọc gì trong bài
 
+Muốn **đọc hiểu và thuyết trình lại** bài này (chứ không phải chạy lại thí nghiệm) thì mở
+[`reading-guide/index.html`](reading-guide/index.html) bằng trình duyệt trước. File đó đi từng bảng một,
+chỉ ra các chỗ dễ hiểu sai, có phiếu dự đoán, 24 câu tự kiểm tra kèm đáp án, và kịch bản thuyết trình
+15 phút. Phần dưới đây là để **chạy lại** thí nghiệm.
+
 1. **Abstract + Section I** — câu hỏi nghiên cứu: backbone đóng băng có giữ được hiệu năng trong miền và giảm chi phí cập nhật đầu phân loại không.
 2. **Section III.A (dataset)** — 2595 ảnh, 6 lớp, split 1814 / 387 / 394. Dùng đúng split này.
 3. **Table 3–6** — bốn bảng chính; ý nghĩa từng bảng ở mục 4 dưới đây.

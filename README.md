@@ -39,7 +39,8 @@ fair2026-durian-repro/
 ├── paper/                    # bản thảo / hình (nếu kèm)
 └── docs/
     ├── STUDENT_GUIDE.md
-    └── REVIEWER.md
+    ├── REVIEWER.md
+    └── reading-guide/        # tài liệu đọc hiểu + thuyết trình (index.html)
 ```
 
 Script huấn luyện nằm ở `src/`; bảng số đã công bố nằm ở `results/`.
@@ -65,6 +66,12 @@ python src/eval_ood.py --config configs/durian_leaf_task.yaml
 ```
 
 Thứ tự đủ và ghi chú path: [`src/NOTES.md`](src/NOTES.md). Tải dữ liệu: [`data/README.md`](data/README.md). Tóm tắt đóng góp + 5 số: [`paper/ABSTRACT.md`](paper/ABSTRACT.md). Ánh xạ artefact ↔ bảng: [`docs/REVIEWER.md`](docs/REVIEWER.md). Hướng dẫn sinh viên: [`docs/STUDENT_GUIDE.md`](docs/STUDENT_GUIDE.md).
+
+**Muốn đọc hiểu và thuyết trình lại bài báo** (thay vì chạy lại thí nghiệm): mở
+[`docs/reading-guide/index.html`](docs/reading-guide/index.html) bằng trình duyệt. Một file duy nhất,
+tiếng Việt, không cần server: phiếu dự đoán trước khi đọc, giải nghĩa từng bảng kèm các chỗ dễ hiểu
+sai, 24 câu tự kiểm tra có đáp án, 14 câu hỏi hội đồng kèm cách trả lời, kịch bản thuyết trình 15 phút,
+từ điển thuật ngữ, và 6 sơ đồ SVG. Xem [`docs/reading-guide/README.md`](docs/reading-guide/README.md).
 
 Số công bố đã làm tròn. Chênh lệch nhỏ do phiên bản thư viện hoặc nhiễu GPU có thể xảy ra; đối chiếu JSON đã đính kèm trước khi kết luận lệch.
 
